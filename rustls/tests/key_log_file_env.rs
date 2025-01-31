@@ -34,6 +34,8 @@ use common::{
     transfer, Arc, KeyType,
 };
 
+use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
+
 #[test]
 fn exercise_key_log_file_for_client() {
     serialized(|| {

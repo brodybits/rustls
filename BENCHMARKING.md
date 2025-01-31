@@ -1,5 +1,7 @@
 # Benchmarking
 
+<!-- TODO(portable-rustls) UPDATE INFO BELOW AS MAY BE NEEDED FOR THIS FORK -->
+
 This repository includes benchmarks for multiple use cases. They are described below, along with
 information on how to run them.
 

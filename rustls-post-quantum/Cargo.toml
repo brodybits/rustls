@@ -1,6 +1,7 @@
 [package]
 name = "rustls-post-quantum"
-version = "0.2.2"
+# ADAPTED `rustls-post-quantum` version in this fork TO KEEP CI HAPPY
+version = "0.3.0-dev"
 edition = "2021"
 rust-version = "1.71"
 license = "Apache-2.0 OR ISC OR MIT"
@@ -12,7 +13,8 @@ categories = ["network-programming", "cryptography"]
 autobenches = false
 
 [dependencies]
-rustls = { version = "0.23.22", features = ["aws_lc_rs", "prefer-post-quantum"], path = "../rustls" }
+# WITH ADAPTED MAIN PACKAGE NAME for this fork (MISSING version - should be OK in this fork)
+rustls = { features = ["aws_lc_rs", "prefer-post-quantum"], package = "portable-rustls", path = "../rustls" }
 
 [dev-dependencies]
 criterion = "0.5"

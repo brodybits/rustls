@@ -8,7 +8,7 @@
 macro_rules! provider_ring {
     () => {
         #[allow(unused_imports)]
-        use rustls::crypto::ring as provider;
+        use portable_rustls::crypto::ring as provider; // IMPORT WORKAROUND for this fork
         #[allow(dead_code)]
         const fn provider_is_aws_lc_rs() -> bool {
             false
@@ -28,7 +28,7 @@ macro_rules! provider_ring {
 macro_rules! provider_aws_lc_rs {
     () => {
         #[allow(unused_imports)]
-        use rustls::crypto::aws_lc_rs as provider;
+        use portable_rustls::crypto::aws_lc_rs as provider; // IMPORT WORKAROUND for this fork
         #[allow(dead_code)]
         const fn provider_is_aws_lc_rs() -> bool {
             true

@@ -167,6 +167,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1261fe7e33c73b354eab43b1273a57c8f967d0391e80353e51f764ac02cf6775"
 
 [[package]]
+name = "portable-rustls"
+version = "0.1.0-dev"
+dependencies = [
+ "log",
+ "once_cell",
+ "rustls-pki-types",
+ "rustls-webpki",
+ "subtle",
+ "zeroize",
+]
+
+[[package]]
 name = "regex"
 version = "1.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -211,24 +223,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "rustls"
-version = "0.23.22"
-dependencies = [
- "log",
- "once_cell",
- "rustls-pki-types",
- "rustls-webpki",
- "subtle",
- "zeroize",
-]
-
-[[package]]
 name = "rustls-fuzz"
 version = "0.0.1"
 dependencies = [
  "env_logger",
  "libfuzzer-sys",
- "rustls",
+ "portable-rustls",
  "rustls-fuzzing-provider",
 ]
 
@@ -236,7 +236,7 @@ dependencies = [
 name = "rustls-fuzzing-provider"
 version = "0.1.0"
 dependencies = [
- "rustls",
+ "portable-rustls",
  "rustls-webpki",
 ]
 

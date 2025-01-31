@@ -4,6 +4,7 @@
 
 mod common;
 use common::*;
+use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 use rustls::crypto::CryptoProvider;
 use rustls::internal::msgs::base::Payload;
 use rustls::internal::msgs::codec::Codec;
@@ -361,6 +362,7 @@ fn non_ffdhe_kx_does_not_have_ffdhe_group() {
 
 mod ffdhe {
     use num_bigint::BigUint;
+    use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
     use rustls::crypto::{
         ActiveKeyExchange, CipherSuiteCommon, CryptoProvider, KeyExchangeAlgorithm, SharedSecret,
         SupportedKxGroup,

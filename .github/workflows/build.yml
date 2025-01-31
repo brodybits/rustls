@@ -113,8 +113,8 @@ jobs:
       - name: cargo test (debug; rustls-provider-test; all features)
         run: cargo test --all-features -p rustls-provider-test
 
-      - name: cargo package --all-features -p rustls
-        run: cargo package --all-features -p rustls
+      - name: cargo package --all-features -p portable-rustls
+        run: cargo package --all-features -p portable-rustls
 
   msrv:
     name: MSRV
@@ -130,13 +130,13 @@ jobs:
           toolchain: "1.71"
 
       # zlib-rs is optional and requires a later MSRV
-      - run: cargo check --locked --lib $(admin/all-features-except zlib rustls) -p rustls
+      - run: cargo check --locked --lib $(admin/all-features-except zlib rustls) -p portable-rustls
 
       - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: "1.75"
 
-      - run: cargo check --locked --lib --all-features -p rustls
+      - run: cargo check --locked --lib --all-features -p portable-rustls
 
   features:
     name: Features
@@ -295,7 +295,7 @@ jobs:
         uses: dtolnay/rust-toolchain@nightly
 
       - name: cargo doc (rustls; all features)
-        run: cargo doc --locked --all-features --no-deps --document-private-items --package rustls
+        run: cargo doc --locked --all-features --no-deps --document-private-items --package portable-rustls
         env:
           RUSTDOCFLAGS: -Dwarnings
 
@@ -389,8 +389,8 @@ jobs:
         run: cargo install cross --git https://github.com/cross-rs/cross
       - name: Install bindgen feature & CLI for aws-lc-sys (as needed for many cross targets)
         if: ${{ matrix.target != 'i686-unknown-linux-gnu' }}
-        run: cargo add --dev --features bindgen 'aws-lc-sys@>0.20' --package rustls --verbose && cargo install bindgen-cli --verbose
-      - run: cross test --package rustls --target ${{ matrix.target }}
+        run: cargo add --dev --features bindgen 'aws-lc-sys@>0.20' --package portable-rustls --verbose && cargo install bindgen-cli --verbose
+      - run: cross test --package portable-rustls --target ${{ matrix.target }}
 
   semver:
     name: Check semver compatibility
@@ -468,7 +468,7 @@ jobs:
       #   is only intended for the main `rustls` crate.
       - run: ./admin/clippy -- --deny warnings --allow clippy::disallowed_types
       # - Keep the main crate free of all warnings.
-      - run: cargo clippy -p rustls -- --deny warnings
+      - run: cargo clippy -p portable-rustls -- --deny warnings
 
   clippy-nightly:
     name: Clippy (Nightly)
@@ -492,7 +492,7 @@ jobs:
       #   is only intended for main `rustls` crate.
       - run: ./admin/clippy -- --allow clippy::disallowed_types
       # Check the main crate for any Clippy nightly warnings, but do not deny them.
-      - run: cargo clippy -p rustls
+      - run: cargo clippy -p portable-rustls
 
   check-external-types:
     name: Validate external types appearing in public API

@@ -1,12 +1,18 @@
 ## Before making a release
 
+<!-- TODO(portable-rustls) UPDATE INFO BELOW FOR THIS FORK -->
+
 1. Run `cargo update` followed by `cargo outdated`, to check if we have any
    dependency updates which are not already automatically taken by their semver specs.
    - If we do, take them if possible.  There should be dependabot PRs submitted for these already, but if
      not make separate commits for these and land those first.
 2. Run the daily-tests CI workflow to check if we have any unfixed regressions.
    You can run the workflow manually for the to-be-released branch by visiting
+   <!-- TODO(portable-rustls) UPDATE LINK FOR THIS FORK:
    [the daily-tests workflow](https://github.com/rustls/rustls/actions/workflows/daily-tests.yml)
+   -- -->
+   <!-- TODO(portable-rustls) CHECK THIS LINK & MAKE IT MORE SPECIFIC FOR THIS FORK: -->
+   [`daily-tests.yml`](./actions/workflows/daily-tests.yml)
    in your browser and selecting "Run workflow".
 3. Update `rustls/Cargo.toml` to set the correct version. Then run `cargo update` again in repo root and in `fuzz/`
    so that lock files pick the new rustls version.
@@ -25,6 +31,7 @@
    * :x: omit any changes to dependency versions (unless these cause breaking changes).
 7. Open a PR with the above commit and include the release notes in the description.
    Wait for review and CI to confirm it as green.
+   <!-- TODO(portable-rustls) UPDATE INFO BELOW FOR THIS FORK -->
    - Any red _should_ naturally block the release.
    - If rustc nightly is broken, this _may_ be acceptable if the reason is understood
      and does not point to a defect in rustls.  eg, at the time of writing in releasing 0.20:
@@ -35,10 +42,14 @@
 
 ## Making a release
 
+TODO
+
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK:
 1. Tag the released version: eg. `git tag -m '0.20.0' v/0.20.0`
 2. Push the tag: eg. `git push origin v/0.20.0`
 3. Do the release: `cargo publish` when sat in `rustls/`.
    - Do not use `--allow-dirty`; use a separate working tree if needed.
+-- -->
 
 ## After making a release
 
@@ -48,6 +59,9 @@
 
 ## Maintenance point releases
 
+TODO
+
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK:
 When point releases for bug fixes and small backwards compatible changes, but `main` contains unreleased breaking
 changes we follow a modified release process using a longer-lived maintenance branch.
 
@@ -58,3 +72,4 @@ changes we follow a modified release process using a longer-lived maintenance br
 2. Make pull-requests for any changes you want to include in the point release, targeted against the release branch.
 3. Follow the usual release process, but use the release branch instead of `main` when making the release.
    - For example, `cargo publish` should be run from the release branch, not `main`.
+-- -->
