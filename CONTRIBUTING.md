@@ -1,5 +1,7 @@
 # Contributing
 
+<!-- TODO(portable-rustls) UPDATE INFO BELOW FOR THIS FORK -->
+
 Thanks for considering helping this project.  There are many
 ways you can help: using the library and reporting bugs,
 reporting usability issues, making additions and improvements
@@ -14,7 +16,11 @@ a pcap or reproduction steps.
 Feel free to file github issues to get help, or ask a question.
 
 If you believe you've found a security bug please
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK:
 [open a draft security advisory](https://github.com/rustls/rustls/security/advisories/new)
+-- -->
+<!-- TODO(portable-rustls) CLEANUP & UPDATE WITH MORE SPECIFIC INFO FOR THIS FORK: -->
+REPORT PRIVATELY TO A MAINTAINER OF THIS FORK OR [to upstream `rustls` via security form](https://github.com/rustls/rustls/security/advisories/new)
 in GitHub, and not as a regular repository issue. See [SECURITY.md] for more
 information.
 
@@ -48,8 +54,14 @@ Our default workflow is to rebase clean commit history from a PR to `main`.
 
 ## Security bugs
 
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK:
 Please report security bugs by [opening a draft security advisory](https://github.com/rustls/rustls/security/advisories/new)
 in GitHub, and not as a regular repository issue.
+-- -->
+
+<!-- TODO(portable-rustls) CLEANUP & UPDATE WITH MORE SPECIFIC INFO FOR THIS FORK: -->
+PLEASE REPORT ANY SECURITY ISSUES PRIVATELY TO A MAINTAINER OF THIS FORK OR [to upstream `rustls` via security form on GitHub](https://github.com/rustls/rustls/security/advisories/new),
+NOT VIA PUBLIC GITHUB ISSUE, DISCUSSION or PR.
 
 See [SECURITY.md] for more information.
 
@@ -467,4 +479,5 @@ assist code reviewers of end-user code.
 
 ## Licensing
 
+<!-- TODO(portable-rustls) UPDATE INFO HERE & IN LICENSE FILES AS MAY BE NEEDED FOR THIS FORK: -->
 Contributions are made under [rustls's licenses](LICENSE).

@@ -9,6 +9,7 @@ publish = false
 [dependencies]
 hex = "0.4"
 provider-example = { package = "rustls-provider-example", version = "0.0.1", path = "../provider-example" }
-rustls = { version = "0.23.8", features = ["aws_lc_rs", "logging"], path = "../rustls" }
+# WITH ADAPTED MAIN PACKAGE NAME for this fork (MISSING version - should be OK in this fork)
+rustls = { features = ["aws_lc_rs", "logging"], package = "portable-rustls", path = "../rustls" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"

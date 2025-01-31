@@ -1,26 +1,37 @@
 [workspace]
 members = [
   # Bogo test shim
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "bogo",
   # CI benchmarks
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "ci-bench",
   # Network-based tests
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "connect-tests",
   # tests and example code
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "examples",
   # Tests that require OpenSSL
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "openssl-tests",
   # example of custom provider
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "provider-example",
   # the main library and tests
+  # (with updated package name, version, etc., updated tests & updated doc tests in this fork)
   "rustls",
   # benchmarking tool
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "rustls-bench",
   # experimental post-quantum algorithm support
+  # (adapted to import from updated `portable-rustls` package name in this fork, with documentation updates - kept unsupported to keep CI happy)
   "rustls-post-quantum",
   # rustls cryptography provider integration tests
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "rustls-provider-test",
   # rustls cryptography provider for fuzzing
+  # (adapted to import from updated `portable-rustls` package name in this fork)
   "rustls-fuzzing-provider",
 ]
 

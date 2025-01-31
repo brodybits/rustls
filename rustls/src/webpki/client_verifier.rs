@@ -201,6 +201,7 @@ impl ClientCertVerifierBuilder {
 /// To require all clients present a client certificate issued by a trusted CA:
 /// ```no_run
 /// # #[cfg(any(feature = "ring", feature = "aws_lc_rs"))] {
+/// # use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 /// # use rustls::RootCertStore;
 /// # use rustls::server::WebPkiClientVerifier;
 /// # let roots = RootCertStore::empty();
@@ -214,6 +215,7 @@ impl ClientCertVerifierBuilder {
 /// anonymous clients that present no client certificate:
 /// ```no_run
 /// # #[cfg(any(feature = "ring", feature = "aws_lc_rs"))] {
+/// # use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 /// # use rustls::RootCertStore;
 /// # use rustls::server::WebPkiClientVerifier;
 /// # let roots = RootCertStore::empty();
@@ -226,6 +228,7 @@ impl ClientCertVerifierBuilder {
 ///
 /// If you wish to disable advertising client authentication:
 /// ```no_run
+/// # use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 /// # use rustls::RootCertStore;
 /// # use rustls::server::WebPkiClientVerifier;
 /// # let roots = RootCertStore::empty();
@@ -236,6 +239,7 @@ impl ClientCertVerifierBuilder {
 /// client certificate revocation lists (CRLs):
 /// ```no_run
 /// # #[cfg(any(feature = "ring", feature = "aws_lc_rs"))] {
+/// # use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 /// # use rustls::RootCertStore;
 /// # use rustls::server::{WebPkiClientVerifier};
 /// # let roots = RootCertStore::empty();

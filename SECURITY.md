@@ -1,7 +1,10 @@
 # Security Policy
 
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK -->
+
 ## Supported Versions
 
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK:
 Security fixes will be backported only to the rustls versions for which the
 original semver-compatible release was published less than 2 years ago.
 
@@ -20,6 +23,7 @@ will not be.
 > We use the date of `crates.io` publication when evaluating the security
 > policy. For example, while the Rustls 0.20.0 GitHub release note was created
 > Jul, 2023 the actual release in `crates.io` was published in Sept. 2021.
+-- -->
 
 ### Minimum Supported Rust Version
 
@@ -59,9 +63,15 @@ MSRV than this policy.
 
 ## Reporting a Vulnerability
 
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK:
 Please report security bugs [via github](https://github.com/rustls/rustls/security/advisories/new).
+-- -->
+<!-- TODO(portable-rustls) CLEANUP & UPDATE WITH MORE SPECIFIC INFO FOR THIS FORK: -->
+PLEASE REPORT ANY SECURITY ISSUES PRIVATELY TO A MAINTAINER OF THIS FORK OR [to upstream `rustls` via security form on GitHub](https://github.com/rustls/rustls/security/advisories/new),
+NOT VIA PUBLIC GITHUB ISSUE, DISCUSSION or PR.
 We'll then:
 
+<!-- TODO(portable-rustls) UPDATE INFO FOR THIS FORK: -->
 - Prepare a fix and regression tests.
 - Backport the fix and make a patch release for most recent release.
 - Submit an advisory to [rustsec/advisory-db](https://github.com/RustSec/advisory-db).

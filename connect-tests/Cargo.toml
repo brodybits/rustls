@@ -7,7 +7,8 @@ description = "Rustls connectivity based integration tests."
 publish = false
 
 [dependencies]
-rustls = { path = "../rustls", features = ["logging"] }
+# WITH ADAPTED MAIN PACKAGE NAME for this fork
+rustls = { package = "portable-rustls", path = "../rustls", features = ["logging"] }
 
 [dev-dependencies]
 hickory-resolver = { workspace = true }

@@ -8,6 +8,8 @@ mod test_utils;
 use std::io;
 use std::sync::Arc;
 
+use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
+
 use rustls::ServerConnection;
 use test_utils::*;
 

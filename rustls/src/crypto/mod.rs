@@ -124,6 +124,7 @@ pub use crate::suites::CipherSuiteCommon;
 ///
 /// ```
 /// # #[cfg(feature = "aws_lc_rs")] {
+/// # use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 /// # use std::sync::Arc;
 /// # mod fictious_hsm_api { pub fn load_private_key(key_der: pki_types::PrivateKeyDer<'static>) -> ! { unreachable!(); } }
 /// use rustls::crypto::aws_lc_rs;
@@ -667,6 +668,7 @@ impl From<Vec<u8>> for SharedSecret {
 ///
 /// ```rust
 /// # #[cfg(feature = "fips")] {
+/// # use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 /// rustls::crypto::default_fips_provider().install_default()
 ///     .expect("default provider already set elsewhere");
 /// # }
@@ -676,6 +678,7 @@ impl From<Vec<u8>> for SharedSecret {
 ///
 /// ```rust
 /// # #[cfg(feature = "fips")] {
+/// # use portable_rustls as rustls; // IMPORT WORKAROUND for this fork
 /// # let root_store = rustls::RootCertStore::empty();
 /// let config = rustls::ClientConfig::builder_with_provider(
 ///         rustls::crypto::default_fips_provider().into()
